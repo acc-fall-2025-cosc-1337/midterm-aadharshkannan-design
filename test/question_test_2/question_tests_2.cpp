@@ -1,12 +1,13 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "question2.h"
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
+TEST_CASE("Verify modify_values")
+{
+    int a = 10;
+    int b = 10;
+    modify_values(a, b);
+    REQUIRE(a == 10);
+    REQUIRE(b == 15);
 }
 
-TEST_CASE("test")
-{
-	REQUIRE(test_config() == true);
-}

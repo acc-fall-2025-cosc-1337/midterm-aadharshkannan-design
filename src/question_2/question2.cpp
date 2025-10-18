@@ -1,6 +1,7 @@
 #include "question2.h"
 
-bool test_config()
+void modify_values(int byValue, int &byRef)
 {
-    return true;
+    byValue += 5;
+    byRef += 5;
 }

@@ -1,12 +1,12 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+
+
+#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "question1.h"
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
-}
-
-TEST_CASE("test")
+TEST_CASE("Verify binary_to_decimal")
 {
-	REQUIRE(test_config() == true);
+    REQUIRE(binary_to_decimal("00001010") == 10);
+    REQUIRE(binary_to_decimal("10101010") == 170);
+    REQUIRE(binary_to_decimal("11111111") == 255);
 }
